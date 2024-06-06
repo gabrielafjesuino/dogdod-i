@@ -1,25 +1,73 @@
 from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
+pacientess = []
+agendamento = []
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', pacientes=pacientess, agendamento=agendamento)
 
 @app.route('/pacientes')
 def pacientes():
     return render_template('pacientes.html')
 
+@app.route('/verificar_pacientes', methods=['GET', 'POST'])
+def verificar_pacientes():
+    if request.method == 'POST':
+        nome = request.form['nome']
+        especie = request.form['especie']
+        raca = request.form['raca']
+        peso = request.form['peso']
+        nome_tutor = request.form['nome_tutor']
+        telefone = request.form['telefone']
+        codigo = len(pacientess)
+        pacientess.append([codigo, nome, especie, raca, peso, nome_tutor, telefone])
+        return render_template('lista_pacientes.html', pacientes=pacientess)
+
 @app.route('/agendamento_consultas')
 def agendamento_consultas():
     return render_template('agendamento_consultas.html')
+
+@app.route('/verificar_agendamento_consultas', methods=['GET', 'POST'])
+def verificar_agendamento_consultas():
+    if request.method == 'POST':
+        nome = request.form['nome']
+        nome_tutor = request.form['nome_tutor']
+        data = request.form['data']
+        horario = request.form['horario']
+        sintomas = request.form['sintomas']
+        codigo = len(agendamento)
+        agendamento.append([codigo, nome, nome_tutor, data, horario, sintomas])
+        return render_template('lista_agendamento.html', agendamento=agendamento)
 
 @app.route('/edicao_cadastro')
 def edicao_cadastro():
     return render_template('edicao_cadastro.html')
 
-@app.route('/cancelamento_consultas')
-def cancelamento_consultas():
-    return render_template('cancelamento_consultas.html')
+@app.route('/verificar_edicao_cadastro/<int:codigo>', methods=['GET', 'POST'])
+def verificar_edicao_cadastro(codigo):
+    if request.method == 'POST':
+        nome = request.form['nome']
+        especie = request.form['especie']
+        raca = request.form['raca']
+        peso = request.form['peso']
+        nome_tutor = request.form['nome_tutor']
+        telefone = request.form['telefone']
+        pacientess[codigo] = [codigo, nome, especie, raca, peso, nome_tutor, telefone]
+        return redirect('/')
+    else:
+        paciente = pacientess[codigo]
+        return render_template('edicao_cadastro.html', paciente=paciente)
+
+@app.route('/lista_agendamento')
+def lista_agendamento():
+    return render_template('lista_agendamento.html', agendamento=agendamento)
+
+@app.route('/cancelamento_consultas/<int:codigo>')
+def cancelamento_consultas(codigo):
+    del agendamento[codigo]
+    return redirect('/lista_agendamento')
 
 @app.route('/idade_humana')
 def idade_humana():
@@ -28,7 +76,7 @@ def idade_humana():
 @app.route('/verificar_idade', methods=['POST'])
 def verificar_idade():
 
-    especie = input(request.form['especie'])
+    especie = (request.form['especie'])
     idade = int(request.form['idade'])
 
     if especie.lower() == 'cachorro':
@@ -86,7 +134,7 @@ def quantidade_mililitros_soro():
 def verificar_quantidade_mililitros_soro():
 
     peso_animal = float(request.form['peso_animal'])
-    grau_desidratacao = input(request.form['grau_desidratacao'])
+    grau_desidratacao = request.form['grau_desidratacao']
 
     if grau_desidratacao.lower() == 'leve':
         volume_fluidoterapia = 50 * peso_animal
@@ -95,7 +143,7 @@ def verificar_quantidade_mililitros_soro():
     elif grau_desidratacao.lower() == 'grave':
         volume_fluidoterapia = 100 * peso_animal
 
-    return render_template('quantidade_mililitros_soro.html', quantidade_mililitros_soro_python = f'Volume de fluidoterapia a ser administrado: {volume_fluidoterapia} mL.', quantidade_mililitros_soro=quantidade_mililitros_soro)
+    return render_template('quantidade_mililitros_soro.html', quantidade_mililitros_soro_python = f'Volume de fluidoterapia a ser administrado: {volume_fluidoterapia} mL.')
 
 if __name__ == '__main__':
     app.run(debug=True)
