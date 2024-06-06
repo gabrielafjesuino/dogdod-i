@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <link rel = "stylesheet" href = "static/css/estilo_medicamento.css">
+    <title>Calculadora- Dose do Medicamento</title>
 </head>
 <body>
-
+    <h1>CALCULE A MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO</h1>
+    <form action = "/verificar_medicamento" method = "POST">
+        <label for="peso_animal">Informe o peso do animal em kg:</label>
+        <input type = "number" id="peso_animal" name="peso_animal" step = "0.01" required>
+        <label for="dose_recomendada">Informe a dose recomendada em mg/kg:</label>
+        <input type="number" id="dose_recomendada" name="dose_recomendada" required>
+        <button type="submit">CALCULAR</button>
+    </form>
+    <div id = "medicamento_python">
+        {% if medicamento_python %}
+            <p> {{ medicamento_python }} </p>
+        {% endif %}
+    </div>
 </body>
 </html>

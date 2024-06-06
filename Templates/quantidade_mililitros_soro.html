@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <link rel = "stylesheet" href = "static/css/estilo_soro.css">
+    <title>Calculadora - Mililitros de Soro</title>
 </head>
 <body>
-
+    <h1>CALCULE A QUANTIDADE DE MILILITROS DE SORO</h1>
+    <form action = "/verificar_quantidade_mililitros_soro" method = "post">
+        <label for = "peso_animal">Informe o peso do animal em kg:</label>
+        <input type = "number" id = "peso_animal" name = "peso_animal" step = "0.01" required>
+        <label for = "grau_desidratacao">Informe o grau de desidratação (Leve, Moderada ou Grave):</label>
+        <select name = "grau_desidratacao" id = "grau_desidratacao">
+            <option value = "Leve">Leve</option>
+            <option value = "Moderada">Moderada</option>
+            <option value = "Grave">Grave</option>
+        </select>
+        <button type = "submit">CALCULAR</button>
+    </form>
+    <div id = "quantidade_mililitros_soro_python">
+        {% if quantidade_mililitros_soro_python %}
+            <p> {{ quantidade_mililitros_soro_python }} </p>
+        {% endif %}
+    </div>
 </body>
 </html>

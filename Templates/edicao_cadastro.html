@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "static/css/estilo_edicao.css">
+    <title>Editar - Cadastro</title>
 </head>
 <body>
-
+    <h1>EDITAR</h1>
+    <form action="/editar_cadastro/{{ paciente[0] }}" method="POST">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" value="{{ paciente[1] }}"><br>
+        <label for="especie">Espécie:</label><br>
+        <input type="text" id="especie" name="especie" value="{{ paciente[2] }}"><br>
+        <label for="raca">Raça:</label><br>
+        <input type="text" id="raca" name="raca" value="{{ paciente[3] }}"><br>
+        <label for="peso">Peso:</label><br>
+        <input type="number" id="peso" name="peso" step = "0.01" value="{{ paciente[4] }}" required><br>
+        <label for="nome_tutor">Nome do tutor:</label><br>
+        <input type="text" id="nome_tutor" name="nome_tutor" value="{{ paciente[5] }}"><br>
+        <label for="telefone">Telefone:</label><br>
+        <input type="number" id="telefone" name="telefone" value="{{ paciente[6] }}"><br>
+        <input type="submit" value="SALVAR">
+    </form>
 </body>
 </html>

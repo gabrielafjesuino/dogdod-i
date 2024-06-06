@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "static/css/estilo_lista_pacientes.css">
+    <title>Lista de Pacientes</title>
+</head>
+<body>
+    <h1>LISTA DE PACIENTES</h1>
+    <ul>
+        {% for paciente in pacientes %}
+        <li>{{ paciente[1] }} - {{ paciente[2] }} - {{ paciente[3] }} - {{ paciente[4] }} - {{ paciente[5] }} - {{ paciente[6] }}
+            <ul>
+                <li><a href="/verificar_edicao_cadastro/{{ loop.index0 }}">EDITAR</a></li>
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/pacientes">ADICIONAR PACIENTE</a>
+</body>
+</html>
