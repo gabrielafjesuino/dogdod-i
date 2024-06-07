@@ -9,60 +9,152 @@
 <body>
     <header>
         <img src = "static/img/logo.png" alt = "Logo da Dog Dodói" />
+        <div class="menu">
+            <a href = "/pacientes">
+                <button type = "button" class = "botao" style="background-color: rgba(83, 120, 164, 0.76); color: white; border: none;">INSERÇÃO DE PACIENTES</button>
+            </a>
+
+            <p class="frase">COMPROMETIDOS COM A SAÚDE E FELICIDADE DE SEU PET!</p>
+            
+            <a href = "/agendamento_consultas">
+                <button type = "button" class = "botao" style="background-color: rgba(83, 120, 164, 0.76); color: white; border: none;">AGENDAMENTO DE CONSULTAS</button>
+            </a>
+        </div>
     </header>
 
-    <div >
-        <nav>
-            <form action = "/pacientes">
-                <button type = "submit">INSERÇÃO DE PACIENTES</button>
-            </form>
-            <form action = "/agendamento_consultas">
-                <button type = "submit">AGENDAMENTO DE CONSULTAS</button>
-            </form>
+    <div class="linha"></div>
+
+    <div class="fundo">
+        <nav class="espacamento">
             <form action = "/idade_humana">
-                <button type = "submit">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
             </form>
             <form action = "/medicamento">
-                <button type = "submit">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
             </form>
             <form action = "/quantidade_mililitros_soro">
-                <button type = "submit">CALCULADORA (MILILITROS DE SORO)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (MILILITROS DE SORO)</button>
             </form>
         </nav>
     </div>
 
-    <img src = "static/banner.png" alt = "Banner" />
-
     <div class="linha"></div>
-    <h1 class="titulos">SOBRE NÓS</h1>
+
+    <img src = "static/img/banner.jpg" alt = "Banner" style="width: 100%"/>
+
+    <div class="linha" style="margin-top: -4px;"></div>
+
+    <div style=" background-color: #e8edf3;">
+        <img class = "diferenciais" src = "static/img/diferencial.png" alt = "Banner" style="width: 60%;"/>
+    </div>
+    
+    <div class="linha"></div>
+
+    <div class="div-titulo">
+        <h1 class="titulos">SOBRE NÓS</h1>
+    </div>
+
     <h2 class = "subtitulos">Clínica Veterinária Dog Dodói</h2>
 
-    <img src = "static/planos.png" alt = "Sobre Nós" />
-
-    <div class="linha"></div>
-    <h1 class="titulos">SERVIÇOS OFERECIDOS</h1>
-    <h2 class = "subtitulos">Profissionais altamente qualificados</h2>
-
-    <div>
-        <img class = "imagens" src = "static/diferencial1.png" alt = "Equipamentos de alto padrão" />
-        <img class = "imagens" src = "static/diferencial2.png" alt = "Salas exclusivas de aulas coletivas" />
-        <img class = "imagens" src = "static/diferencial3.png" alt = "Profissionais qualificados" />
-        <img class = "imagens"  src = "static/diferencial4.png" alt = "Programas de nutrição e saúde" />
+    <div class="container"display: flex; margin: 0 auto;>
+        <div>
+            <img class="equipe" src = "static/img/equipe.png" alt = "Equipe"/>
+        </div>
+        <div>
+            <p class="texto1">
+                Desde sua inauguração em 2017, a  Clínica Veterinária Dog Dodói tem sido referência no cuidado e bem-estar de animais de estimação em São Paulo. Fundada por quatro veterinários apaixonados, começou de forma modesta, porém hoje oferece uma ampla gama de serviços, em um ambiente acolhedor e seguro, contando com uma equipe altamente qualificada, dedicada e apaixonada pelo que faz.
+            </p>
+        </div>
     </div>
 
     <div class="linha"></div>
-    <h1 class="titulos">PROFISSIONAIS DISPONÍVEIS</h1>
+
+    <div class="div-titulo" >
+        <h1 class="titulos" style="width: 323px; height: 37px;">VETERINÁRIOS</h1>
+    </div>
+
+    <h2 class = "subtitulos">Profissionais altamente qualificados</h2>
+
+    <div class="container2">
+        <div>
+            <p>
+                Nossa equipe de médicos veterinários está continuamente se aprimorando por meio de pós-graduações, participação em cursos e congressos nacionais e internacionais, visando proporcionar diagnósticos e tratamentos veterinários de excelência para os nossos pacientes. Destacamos o nosso compromisso com a medicina veterinária preventiva, buscando auxiliar os tutores na promoção da saúde e qualidade de vida de seus animais de estimação, sejam cães, gatos ou outros pets.
+            </p>
+            <img class= "img1" style="width:300px;" src = "static/img/decoracao.png" alt = "Decoração"/>
+        </div>
+        <div>
+            <img style="width:400px;" src = "static/img/veterinários.png" alt = "Veterinários"/>
+        </div>
+    </div>
+
+    <div class="linha"></div>
+
+    <div class="div-titulo">
+        <h1 class="titulos" style="width: 438px; height: 37px;">SERVIÇOS OFERECIDOS</h1>
+    </div>
+
     <h2 class = "subtitulos">O melhor atendimento e diagnóstico</h2>
 
-    <div>
-        <img class = "imagens" src = "static/diferencial1.png" alt = "Equipamentos de alto padrão" />
-        <img class = "imagens" src = "static/diferencial2.png" alt = "Salas exclusivas de aulas coletivas" />
-        <img class = "imagens" src = "static/diferencial3.png" alt = "Profissionais qualificados" />
-        <img class = "imagens"  src = "static/diferencial4.png" alt = "Programas de nutrição e saúde" />
+    <div class="container3">
+        <div class="parte1">
+            <div class="borda">
+                <h2>EXAMES</h2>
+                <p>Descubra a excelência em cuidados veterinários na nossa clínica, onde os exames são realizados com tecnologia avançada e há expertise profissional incomparável. Contamos com equipamentos modernos e uma equipe dedicada para garantir diagnósticos precisos para o seu pet. Desde exames de imagem até análises laboratoriais detalhadas, estamos comprometidos em oferecer o melhor atendimento para a saúde do seu animal de estimação.</p>
+            </div>
+            <div class="borda">
+                <h2>CIRURGIAS</h2>
+                <p>Confie na nossa equipe especializada e nas nossas instalações completas para realizar cirurgias veterinárias, desde as mais simples até as mais complexas. Utilizamos a anestesia inalatória, um método reconhecido pela sua segurança. Todos os animais passam por uma avaliação detalhada e realizam exames veterinários pré-operatórios para garantir o sucesso de qualquer procedimento cirúrgico.</p>
+            </div>
+        </div>
+        <div class="parte2">
+            <div class="borda">
+                <h2>CONSULTAS</h2>
+                <p>Verifique a saúde do seu pet com nosso veterinário clínico geral ou agende uma consulta com nossos especialistas em:</p>
+                <ul>
+                    <li>Dermatologia</li>
+                    <li>Odontologia</li>
+                    <li>Ortopedia</li>
+                    <li>Cardiologia</li>
+                    <li>Oftalmologia</li>
+                    <li>Neurologia</li>
+                    <li>Oncologia</li>
+                    <li>Nutrição</li>
+                    <li>Comportamento animal</li>
+                    <li>Medicina interna</li>
+                </ul>
+            </div>
+            <div class="borda">
+                <h2>ATENDIMENTO 24 HORAS</h2>
+                <p class="a">Na Clínica Veterinária Dog Dodói, estamos sempre aqui para você e seu companheiro de estimação, mesmo nos momentos mais urgentes. Oferecemos atendimento 24 horas para emergências, garantindo que seu pet receba cuidados especializados sempre que necessário.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="fundo_rodape" style="padding-top: 55px;">
+        <div>
+            <a href="https://maps.google.com">
+                <img style = "width: 350px; padding-left: 50px;" src = "static/img/localizacao.png" alt = "Localização"/>
+            </a>
+            </div>
+        <div>
+            <a href="https://www.instagram.com">
+                <img style = "width: 250px; padding-left: 40px;" src = "static/img/instagram.png" alt = "Instagram"/>
+            </a>
+            <a href="https://www.facebook.com">
+                <img style = "width: 250px; padding-left: 40px;" src = "static/img/facebook.png" alt = "Facebook"/>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.whatsapp.com">
+                <img src = "static/img/whatsapp.png" alt = "WhatsApp"/>
+            </a>
+            <img src = "static/img/telefone.png" alt = "Telefone"/>
+        </div>
+            <img class="img_rod" src = "static/img/rodape.png" alt = "Imagem de Animais"/>
     </div>
 
     <footer>
-        <p>© Clínica Veterinária Dog Dodói - Todos os direitos reservados | Desenvolvido por: Ana Pereira, Gabriela Jesuino, Giovana Pereira, Maria dos Santos</p>
+        <p>© Clínica Veterinária Dog Dodói - Todos os direitos reservados | Desenvolvido por: Gabriela F. Jesuino, Maria Eduarda G. dos Santos, Giovana B. Pereira e Ana Luiza Pereira</p>
     </footer>
 </body>
 </html>

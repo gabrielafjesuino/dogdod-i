@@ -55,7 +55,8 @@ def verificar_edicao_cadastro(codigo):
         nome_tutor = request.form['nome_tutor']
         telefone = request.form['telefone']
         pacientess[codigo] = [codigo, nome, especie, raca, peso, nome_tutor, telefone]
-        return redirect('/')
+        return render_template('lista_pacientes.html', pacientes=pacientess)
+
     else:
         paciente = pacientess[codigo]
         return render_template('edicao_cadastro.html', paciente=paciente)
