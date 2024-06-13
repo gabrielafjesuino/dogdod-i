@@ -1,0 +1,165 @@
+* {
+    margin:0;
+    padding:0;
+}
+ 
+header {
+    background-color: #D3DDE9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+header img {
+    width: 160px;
+    padding-left: 30px;
+}
+ 
+.linha {
+    background-color: #405077;
+    width: 100%;
+    height: 30px;
+}
+ 
+.botao {
+    border-radius: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin: auto 0;
+}
+ 
+.fundo {
+    padding: 20px;
+    padding-bottom: 20px;
+    background-color: #5378A4
+}
+ 
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: right;
+    gap: 26px;
+    padding-right: 40px;
+}
+ 
+.espacamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+ 
+.frase {
+    align-items: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #5378A4;
+}
+ 
+.fundo_rodape {
+    background-color: #405077;
+    width: 100%;
+    height: 315px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+}
+ 
+.img_rod {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+}                                                                                                                                                                                  
+footer {
+    background-color: rgba(83, 120, 164, 0.76);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+    color: white;
+}
+
+h1 {
+    background-color: rgba(83, 120, 164, 0.76);
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 547px;
+    padding-right: 547px;
+}
+
+.azul {
+    background-color:rgba(83, 120, 164, 0.76);;
+    color: white; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+    height: auto;
+    background: #fff;
+    padding: 0;
+    background-color: #D3DDE9;
+}
+
+.container {
+    width:300px;
+    height: 300px;
+    border-radius: 60px;
+    background-color:rgba(83, 120, 164, 0.76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 113px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+ }
+ nav.navz {
+    text-align: center;
+    width: 100%;
+    background-color: #D3DDE9;
+ }
+ 
+ label{
+    background: #405077;
+    padding-left: 10px;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    margin-bottom: 100px;
+}
+
+.grupo {
+    margin-bottom: 20px
+}
+
+.button {
+    background-color: #405077;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+ }
+ 
+ .button:hover {
+    background-color: #405077;
+ }

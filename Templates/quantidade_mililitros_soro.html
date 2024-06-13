@@ -9,44 +9,73 @@
 <body>
     <header>
         <img src = "static/img/logo.png" alt = "Logo da Dog Dodói" />
+        <div class="menu">
+            <a href = "/pacientes">
+                <button type = "button" class = "botao" style="background-color: rgba(83, 120, 164, 0.76); color: white; border: none;">INSERÇÃO DE PACIENTES</button>
+            </a>
+ 
+            <p class="frase">COMPROMETIDOS COM A SAÚDE E FELICIDADE DE SEU PET!</p>
+           
+            <a href = "/agendamento_consultas">
+                <button type = "button" class = "botao" style="background-color: rgba(83, 120, 164, 0.76); color: white; border: none;">AGENDAMENTO DE CONSULTAS</button>
+            </a>
+        </div>
     </header>
-
-    <div >
-        <nav>
-            <form action = "/pacientes">
-                <button type = "submit">INSERÇÃO DE PACIENTES</button>
-            </form>
-            <form action = "/agendamento_consultas">
-                <button type = "submit">AGENDAMENTO DE CONSULTAS</button>
+ 
+    <div class="linha"></div>
+ 
+    <div class="fundo">
+        <nav class="espacamento">
+            <form action = "/">
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">PÁGINA INICIAL</button>
             </form>
             <form action = "/idade_humana">
-                <button type = "submit">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
             </form>
             <form action = "/medicamento">
-                <button type = "submit">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
-            </form>
-            <form action = "/quantidade_mililitros_soro">
-                <button type = "submit">CALCULADORA (MILILITROS DE SORO)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
             </form>
         </nav>
     </div>
+ 
+    <div class="linha"></div>
 
     <h1>CALCULE A QUANTIDADE DE MILILITROS DE SORO</h1>
-    <form action = "/verificar_quantidade_mililitros_soro" method = "post">
-        <label for = "peso_animal">Informe o peso do animal em kg:</label>
+    <form action = "/verificar_quantidade_mililitros_soro" method = "post" class="base">
+        <label for = "peso_animal" class = "espaco">Informe o peso do animal em kg:</label>
         <input type = "number" id = "peso_animal" name = "peso_animal" step = "0.01" required>
-        <label for = "grau_desidratacao">Informe o grau de desidratação (Leve, Moderada ou Grave):</label>
+        <label for = "grau_desidratacao" class = "espaco">Informe o grau de desidratação (Leve, Moderada ou Grave):</label>
         <select name = "grau_desidratacao" id = "grau_desidratacao">
             <option value = "Leve">Leve</option>
             <option value = "Moderada">Moderada</option>
             <option value = "Grave">Grave</option>
         </select>
-        <button type = "submit">CALCULAR</button>
+        <button type = "submit" class = "botao2">CALCULAR</button>
     </form>
-    <div id = "quantidade_mililitros_soro_python">
-        {% if quantidade_mililitros_soro_python %}
-            <p> {{ quantidade_mililitros_soro_python }} </p>
-        {% endif %}
+    <div class="divao">
+        <div id = "quantidade_mililitros_soro_python" class="resultado">
+            {% if quantidade_mililitros_soro_python %}
+                <p> {{ quantidade_mililitros_soro_python }} </p>
+            {% endif %}
+        </div>
     </div>
+    <div class="fundo_rodape" style="padding-top: 55px;">
+        <div>
+            <img style = "width: 350px; padding-left: 50px;" src = "static/img/localizacao.png" alt = "Localização"/>
+        </div>
+        <div>
+            <img style = "width: 250px; padding-left: 40px;" src = "static/img/instagram.png" alt = "Instagram"/>
+            <img style = "width: 250px; padding-left: 40px;" src = "static/img/facebook.png" alt = "Facebook"/>
+        </div>
+        <div>
+            <img src = "static/img/whatsapp.png" alt = "WhatsApp"/>
+            <img src = "static/img/telefone.png" alt = "Telefone"/>
+        </div>
+            <img class="img_rod" src = "static/img/rodape.png" alt = "Imagem de Animais"/>
+    </div>
+ 
+    <footer>
+        <p>© Clínica Veterinária Dog Dodói - Todos os direitos reservados | Desenvolvido por: Gabriela F. Jesuino, Maria Eduarda G. dos Santos, Giovana B. Pereira e Ana Luiza Pereira</p>
+    </footer>
 </body>
 </html>

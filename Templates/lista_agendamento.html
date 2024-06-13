@@ -9,27 +9,36 @@
 <body>
     <header>
         <img src = "static/img/logo.png" alt = "Logo da Dog Dodói" />
+        <div class="menu">
+            <a href = "/pacientes">
+                <button type = "button" class = "botao" style="background-color: rgba(83, 120, 164, 0.76); color: white; border: none;">INSERÇÃO DE PACIENTES</button>
+            </a>
+
+            <p class="frase">COMPROMETIDOS COM A SAÚDE E FELICIDADE DE SEU PET!</p>
+            
+            <a href = "/agendamento_consultas">
+                <button type = "button" class = "botao" style="background-color: rgba(83, 120, 164, 0.76); color: white; border: none;">AGENDAMENTO DE CONSULTAS</button>
+            </a>
+        </div>
     </header>
 
-    <div >
-        <nav>
-            <form action = "/pacientes">
-                <button type = "submit">INSERÇÃO DE PACIENTES</button>
-            </form>
-            <form action = "/agendamento_consultas">
-                <button type = "submit">AGENDAMENTO DE CONSULTAS</button>
-            </form>
+    <div class="linha"></div>
+
+    <div class="fundo">
+        <nav class="espacamento">
             <form action = "/idade_humana">
-                <button type = "submit">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
             </form>
             <form action = "/medicamento">
-                <button type = "submit">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
             </form>
             <form action = "/quantidade_mililitros_soro">
-                <button type = "submit">CALCULADORA (MILILITROS DE SORO)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (MILILITROS DE SORO)</button>
             </form>
         </nav>
     </div>
+
+    <div class="linha"></div>
 
     <h1>LISTA DE AGENDAMENTOS</h1>
     <ul>
@@ -42,5 +51,32 @@
         {% endfor %}
     </ul>
     <a href="/agendamento_consultas">ADICIONAR AGENDAMENTO</a>
+
+    <div class="fundo_rodape" style="padding-top: 55px;">
+        <div>
+            <a href="https://maps.google.com">
+                <img style = "width: 350px; padding-left: 50px;" src = "static/img/localizacao.png" alt = "Localização"/>
+            </a>
+            </div>
+        <div>
+            <a href="https://www.instagram.com">
+                <img style = "width: 250px; padding-left: 40px;" src = "static/img/instagram.png" alt = "Instagram"/>
+            </a>
+            <a href="https://www.facebook.com">
+                <img style = "width: 250px; padding-left: 40px;" src = "static/img/facebook.png" alt = "Facebook"/>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.whatsapp.com">
+                <img src = "static/img/whatsapp.png" alt = "WhatsApp"/>
+            </a>
+            <img src = "static/img/telefone.png" alt = "Telefone"/>
+        </div>
+            <img class="img_rod" src = "static/img/rodape.png" alt = "Imagem de Animais"/>
+    </div>
+
+    <footer>
+        <p>© Clínica Veterinária Dog Dodói - Todos os direitos reservados | Desenvolvido por: Gabriela F. Jesuino, Maria Eduarda G. dos Santos, Giovana B. Pereira e Ana Luiza Pereira</p>
+    </footer>
 </body>
 </html>

@@ -3,49 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "static/css/estilo_edicao.css">
+    <link rel = "stylesheet" href = "../static/css/estilo_edicao.css">
     <title>Editar - Cadastro</title>
 </head>
 <body>
     <header>
-        <img src = "static/img/logo.png" alt = "Logo da Dog Dodói" />
+        <img src = "http://127.0.0.1:5000/../static/img/logo.png" alt = "Logo da Dog Dodói" />
+        <div class="menu">
+            <a href = "/pacientes">
+                <button type = "button" class = "botao" style="background-color: rgba(83, 120, 164, 0.76); color: white; border: none;">INSERÇÃO DE PACIENTES</button>
+            </a>
+
+            <p class="frase">COMPROMETIDOS COM A SAÚDE E FELICIDADE DE SEU PET!</p>
+            
+            <a href = "/agendamento_consultas">
+                <button type = "button" class = "botao" style="background-color: rgba(83, 120, 164, 0.76); color: white; border: none;">AGENDAMENTO DE CONSULTAS</button>
+            </a>
+        </div>
     </header>
 
-    <div >
-        <nav>
-            <form action = "/pacientes">
-                <button type = "submit">INSERÇÃO DE PACIENTES</button>
-            </form>
-            <form action = "/agendamento_consultas">
-                <button type = "submit">AGENDAMENTO DE CONSULTAS</button>
-            </form>
+    <div class="linha"></div>
+
+    <div class="fundo">
+        <nav class="espacamento">
             <form action = "/idade_humana">
-                <button type = "submit">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (IDADE HUMANA DO ANIMAL)</button>
             </form>
             <form action = "/medicamento">
-                <button type = "submit">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (MILIGRAMAS/PESO CORPORAL DO MEDICAMENTO)</button>
             </form>
             <form action = "/quantidade_mililitros_soro">
-                <button type = "submit">CALCULADORA (MILILITROS DE SORO)</button>
+                <button type = "submit" class = "botao"; style="background-color: #D3DDE9; color: #405077; border: none;">CALCULADORA (MILILITROS DE SORO)</button>
             </form>
         </nav>
     </div>
 
-    <h1>EDITAR</h1>
-    <form action="/verificar_edicao_cadastro/{{ paciente[0] }}" method="POST">
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" value="{{ paciente[1] }}"><br>
-        <label for="especie">Espécie:</label><br>
-        <input type="text" id="especie" name="especie" value="{{ paciente[2] }}"><br>
-        <label for="raca">Raça:</label><br>
-        <input type="text" id="raca" name="raca" value="{{ paciente[3] }}"><br>
-        <label for="peso">Peso:</label><br>
-        <input type="number" id="peso" name="peso" step = "0.01" value="{{ paciente[4] }}" required><br>
-        <label for="nome_tutor">Nome do tutor:</label><br>
-        <input type="text" id="nome_tutor" name="nome_tutor" value="{{ paciente[5] }}"><br>
-        <label for="telefone">Telefone:</label><br>
-        <input type="number" id="telefone" name="telefone" value="{{ paciente[6] }}"><br>
-        <input type="submit" value="SALVAR">
-    </form>
+    <div class="linha"></div>
+
+    <div class= "azul">
+        <h1>EDITAR</h1>
+        <div class= "container">
+            <form action="/verificar_edicao_cadastro/{{ paciente[0] }}" method="POST">
+                <div>
+                    <div class="grupo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" value="{{ paciente[1] }}">
+                    </div>
+                    <br>
+                    <div class="grupo">
+                        <label for="especie">Espécie:</label>
+                        <input type="text" id="especie" name="especie" value="{{ paciente[2] }}">
+                    </div>
+                    <br>
+                    <div class="grupo">
+                        <label for="raca">Raça:</label>
+                        <input type="text" id="raca" name="raca" value="{{ paciente[3] }}">
+                    </div>
+                    <br>
+                    <div class="grupo">
+                        <label for="peso">Peso:</label>
+                        <input type="number" id="peso" name="peso" step = "0.01" value="{{ paciente[4] }}" required>
+                    </div>
+                    <br>
+                    <div class="grupo">
+                        <label for="nome_tutor">Nome do tutor:</label>
+                        <input type="text" id="nome_tutor" name="nome_tutor" value="{{ paciente[5] }}">
+                    </div>
+                    <br>
+                    <div class="grupo">
+                        <label for="telefone">Telefone:</label>
+                        <input type="number" id="telefone" name="telefone" value="{{ paciente[6] }}">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="submit" value="SALVAR" class="button">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br>
+    </div>
+
+    <div class="fundo_rodape" style="padding-top: 55px;">
+        <div>
+            <a href="https://maps.google.com">
+                <img style = "width: 350px; padding-left: 50px;" src = "http://127.0.0.1:5000/../static/img/localizacao.png" alt = "Localização"/>
+            </a>
+            </div>
+        <div>
+            <a href="https://www.instagram.com">
+                <img style = "width: 250px; padding-left: 40px;" src = "http://127.0.0.1:5000/..//static/img/instagram.png" alt = "Instagram"/>
+            </a>
+            <a href="https://www.facebook.com">
+                <img style = "width: 250px; padding-left: 40px;" src = "http://127.0.0.1:5000/..//static/img/facebook.png" alt = "Facebook"/>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.whatsapp.com">
+                <img src = "http://127.0.0.1:5000/..//static/img/whatsapp.png" alt = "WhatsApp"/>
+            </a>
+            <img src = "http://127.0.0.1:5000/..//static/img/telefone.png" alt = "Telefone"/>
+        </div>
+            <img class="img_rod" src = "http://127.0.0.1:5000/..//static/img/rodape.png" alt = "Imagem de Animais"/>
+    </div>
+
+    <footer>
+        <p>© Clínica Veterinária Dog Dodói - Todos os direitos reservados | Desenvolvido por: Gabriela F. Jesuino, Maria Eduarda G. dos Santos, Giovana B. Pereira e Ana Luiza Pereira</p>
+    </footer>
 </body>
 </html>
